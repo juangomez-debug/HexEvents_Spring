@@ -2,11 +2,13 @@ package com.example.hexspring.modulos;
 
 import org.springframework.web.bind.annotation.*;
 import com.example.hexspring.modulos.usuario;
-
+/* modulo para la confirmacion de datos ingresados al usuario */
 @RestController
-@RequestMapping("/usuarios")
-public class    Registro {
+@RequestMapping("/registro")
+public class    registro {
+
     @PostMapping("/registro")
+
      public String registrarUsuario(@RequestBody usuario  usuario) {
         
         if (usuario.getNombre() == null || usuario.getNombre().isEmpty()) {
